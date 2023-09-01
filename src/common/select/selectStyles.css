@@ -1,0 +1,60 @@
+.select-container {
+  width: 400px;
+  max-height: 250px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.select-container .selectBlock {
+  z-index: 1;
+  font-size: 16px;
+  border-bottom: none;
+  overflow: hidden;
+  background-color: #fffefb;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  width: 350px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+.select-container .selectBlock.open {
+  position: absolute;
+  height: 150px;
+  overflow: scroll;
+}
+.select-container .selectBlock .select-item {
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 48px;
+  width: 100%;
+}
+.select-container .selectBlock .select-item .select-value {
+  color: #719f74;
+}
+.select-container .selectBlock .select-item img {
+  transition: 0.3s ease;
+}
+.select-container .selectBlock .select-item img.open {
+  transform: rotate(180deg);
+  transition: 0.3s ease;
+}
+.select-container .selectBlock .custom-option {
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 48px;
+  border-top: 0.5px solid gray;
+  color: #719f74;
+  width: 100%;
+  transition: 0.2s ease-out;
+}
+.select-container .selectBlock .custom-option:hover {
+  background-color: #719f74;
+  color: white;
+  transition: 0.2s ease-in-out;
+}
+
+/*# sourceMappingURL=selectStyles.css.map */

@@ -1,0 +1,39 @@
+.root {
+  position: relative;
+  max-width: 100%;
+}
+
+.icon {
+  width: 22px;
+  height: 22px;
+  opacity: 0.5;
+  position: absolute;
+  left: 14px;
+  top: 12px;
+}
+
+.input {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 12px 50px;
+  border-radius: 10px;
+  width: 500px;
+  font-size: 16px;
+}
+.input:focus {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.closeIcon {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  opacity: 0.3;
+  top: 15px;
+  right: 20px;
+}
+.closeIcon:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=Search.module.css.map */

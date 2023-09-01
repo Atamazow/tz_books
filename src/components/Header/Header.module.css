@@ -1,0 +1,33 @@
+@charset "UTF-8";
+.background_root {
+  background-image: url("../../assets/image/Tucson-Storytimes.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px; /* Установите высоту фона по вашему желанию */
+}
+
+.title {
+  text-align: center;
+  color: white;
+  padding: 20px 0; /* Добавление внутренних отступов сверху и снизу */
+}
+
+.title__search {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0; /* Добавление внутренних отступов сверху и снизу */
+}
+
+/* Медиа-запросы для адаптивности */
+@media screen and (max-width: 768px) {
+  .background_root {
+    height: 200px; /* Уменьшение высоты фона на мобильных устройствах */
+  }
+}
+@media screen and (max-width: 480px) {
+  .background_root {
+    height: 150px; /* Дополнительное уменьшение высоты фона на более узких мобильных устройствах */
+  }
+}
+
+/*# sourceMappingURL=Header.module.css.map */

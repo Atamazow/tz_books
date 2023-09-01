@@ -4,20 +4,19 @@ import { fetchBooks, selectBooks } from "../../redux/slices/booksSlice";
 import styled from "./Styles/BooksBlock.module.scss";
 import { BooksItem } from "./BooksItem";
 import { selectFilter, selectSubject } from "../../redux/slices/filterSlice";
-import Spinner from "./Spinner";
+import Index from "../../common/Spinner";
 const Books = memo((props) => {
   const dispatch = useDispatch();
   const { books, status } = useSelector(selectBooks);
   const { currentPage, sort, searchValue } = useSelector(selectFilter);
   const subject = useSelector(selectSubject);
-
-  console.log(books);
   useEffect(() => {
     dispatch(fetchBooks({ value: searchValue, currentPage, sort, subject }));
   }, [currentPage, dispatch, searchValue, sort, subject]);
 
   return (
     <div className={styled.root}>
+      <div className={styled.total__books}>{books.length}</div>
       {books.length > 0 && (
         <ul className={styled.content_books}>
           {books?.map((book) => (
@@ -25,9 +24,9 @@ const Books = memo((props) => {
           ))}
         </ul>
       )}
-     <div className={styled.spinner__root}>
-       {status === "loading" && <Spinner />}
-     </div>
+      <div className={styled.spinner__root}>
+        {status === "loading" && <Index />}
+      </div>
     </div>
   );
 });

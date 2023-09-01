@@ -1,5 +1,4 @@
 import React, { memo, useState } from "react";
-import style from "./Sort.module.scss";
 import { Select } from "../../common/select";
 import { useDispatch, useSelector } from "react-redux";
 import { selectSort, setSort } from "../../redux/slices/filterSlice";
@@ -20,13 +19,11 @@ const Sort = memo(() => {
     dispatch(setSort({ sortProperty: selectedValue.value }));
   };
   return (
-    <div className={style.sort__label}>
-      <Select
-        value={values}
-        list={categories}
-        onChange={({ target }) => handleSortChange(target)}
-      />
-    </div>
+    <Select
+      value={values}
+      list={categories}
+      onChange={({ target }) => handleSortChange(target)}
+    />
   );
 });
 

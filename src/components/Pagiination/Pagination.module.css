@@ -1,0 +1,20 @@
+.root {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+.root .btn {
+  padding: 13px;
+  border-radius: 10px;
+  background-color: #719f74;
+  cursor: pointer;
+  color: white;
+  transition: 0.3s;
+  border-width: 0;
+}
+.root .btn:hover {
+  background-color: #68c26f;
+  transition: 0.3s;
+}
+
+/*# sourceMappingURL=Pagination.module.css.map */

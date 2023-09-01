@@ -8,12 +8,11 @@
     background-color: #719f74;
     cursor: pointer;
     color: white;
-    transition: .3s;
+    transition: 0.3s;
     border-width: 0;
     &:hover {
       background-color: #68c26f;
-      transition: .3s;
+      transition: 0.3s;
     }
   }
-
 }

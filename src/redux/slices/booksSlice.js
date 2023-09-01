@@ -2,7 +2,6 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 const API_KEY = "AIzaSyA6J9O1E0sVpApek8NbAifcJ8VDXDNiSNg";
 
-
 export const fetchBooks = createAsyncThunk(
   "books/fetchBooks",
   async ({ value, currentPage, sort, subject }) => {
@@ -36,6 +35,11 @@ const initialState = {
 const booksSlice = createSlice({
   name: "books",
   initialState,
+  reducers: {
+    clearBooks(state) {
+      state.books = [];
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(fetchBooks.pending, (state) => {
@@ -58,4 +62,5 @@ const booksSlice = createSlice({
 
 // не понятный момент Ваха
 export const selectBooks = (state) => state.booksSlice;
+export const { clearBooks } = booksSlice.actions;
 export default booksSlice.reducer;
