@@ -1,0 +1,19 @@
+.root {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  .btn {
+    padding: 13px;
+    border-radius: 10px;
+    background-color: #719f74;
+    cursor: pointer;
+    color: white;
+    transition: .3s;
+    border-width: 0;
+    &:hover {
+      background-color: #68c26f;
+      transition: .3s;
+    }
+  }
+
+}
